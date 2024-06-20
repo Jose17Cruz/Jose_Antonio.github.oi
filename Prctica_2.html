@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica_2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .nav img {
+            width: 120px;
+            height: 75px;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #444;
+            margin: 10px 0;
+        }
+        .datetime {
+            text-align: center;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #555;
+        }
+        .marquee-box {
+            margin: 20px 0;
+        }
+        marquee {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+        }
+    </style>
+    <script>
+        function mostrarFechaHora() {
+            var fechaHora = new Date();
+            var fecha = fechaHora.toLocaleDateString();
+            var hora = fechaHora.toLocaleTimeString();
+            document.getElementById('fecha').innerHTML = fecha;
+            document.getElementById('hora').innerHTML = hora;
+        }
+        setInterval(mostrarFechaHora, 1000);
+    </script>
+</head>
+<body onload="mostrarFechaHora()">
+
+    <div class="container">
+        <div class="header">
+            <img src="encabezado1234.png" alt="Encabezado">
+        </div>
+
+        <div class="nav">
+            <a href="Prctica14Menu.html">
+                <img src="Imagen2.png" alt="Menú">
+            </a>
+        </div>
+
+        <center>
+            <h1>Jose Antonio Cruz Gutierrez, NL:4, Grupo:404</h1>
+            <h1>PARTICA 2 MARQUESINA</h1>
+        </center>
+
+        <div class="datetime">
+            <p>Fecha: <span id="fecha"></span></p>
+            <p>Hora: <span id="hora"></span></p>
+        </div>
+
+        <table>
+            <tr>
+                <th>N.L:04</th>
+                <th>Marquesina</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Animación de izquierda a derecha</td>
+                <td><marquee>Animación de izquierda a derecha</marquee></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Animación alternativa</td>
+                <td><marquee behavior="alternate">Animación alternativa</marquee></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>De abajo hacia arriba</td>
+                <td><marquee direction="up">De abajo hacia arriba</marquee></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>De arriba hacia abajo</td>
+                <td><marquee direction="down">De arriba hacia abajo</marquee></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>De arriba hacia abajo de manera alternativa</td>
+                <td><marquee direction="up" behavior="alternate" style="height:100px">De arriba hacia abajo de manera alternativa</marquee></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td><marquee behavior="alternate" direction="up" width="80%"><marquee direction="right">TEXT</marquee></marquee></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>El mismo ejemplo pero esta vez en un espacio cerrado</td>
+                <td><marquee behavior="alternate" direction="up" width="80%"><marquee direction="right" behavior="alternate">TEXT</marquee></marquee></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Usando un fondo</td>
+                <td><marquee direction="left" style="background:#FCF600">TEXT</marquee></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Aplicando un borde a la zona de movimiento</td>
+                <td><marquee style="border:green 5px solid">TEXT</marquee></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Un poco de texto aquí  </td>
+                <td><marquee>Un poco de texto aquí <img src="moto.jpg" width="88" height="31" alt="Moto"></marquee></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Animación dentro de una línea de texto o un párrafo</td>
+                <td>Un poco de texto antes <marquee width="20%"><img src="moto.jpg" width="88" height="31" alt="Moto"></marquee> Un poco de texto después.</td>
+            </tr>
+            <tr>
+                <td colspan="3">Jose Antonio Cruz</td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <img src="piedepag.png" alt="Pie de Página">
+            <p>Todos los derechos reservados. Elaborado por: José Antonio Cruz Gutiérrez. Tel: 7121875851. E-Mail: joseantoniocruzgutierrez@gmail.com</p>
+            <p>Página web: <a href="http://www.caratula.gob.mx">www.caratula.gob.mx</a>, Domicilio: desconocido</p>
+        </div>
+    </div>
+
+</body>
+</html>
