@@ -1,298 +1,180 @@
-<html><head><title>P2_tablas</title></head>
-<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica_2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .nav img {
+            width: 120px;
+            height: 75px;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #444;
+            margin: 10px 0;
+        }
+        .datetime {
+            text-align: center;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #555;
+        }
+        .marquee-box {
+            margin: 20px 0;
+        }
+        marquee {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+        }
+    </style>
+    <script>
+        function mostrarFechaHora() {
+            var fechaHora = new Date();
+            var fecha = fechaHora.toLocaleDateString();
+            var hora = fechaHora.toLocaleTimeString();
+            document.getElementById('fecha').innerHTML = fecha;
+            document.getElementById('hora').innerHTML = hora;
+        }
+        setInterval(mostrarFechaHora, 1000);
+    </script>
+</head>
+<body onload="mostrarFechaHora()">
 
-<center><table>
-<tr>
-<td>
-<center><img src="encabezado1234.png" alt="P2_tablas.html" width="1000" height="160"></center>
-</td>
-</tr>
-<tr>
-<td><a href="Prctica14Menu.html"><img src="Imagen2.png" width="120" height="75" > </a></td>
-</tr>
-</table></center>
-<font size="2"><font face="Arial Black"><center>
-<h2>"<font color="red">2024.</font color>Año del Bichentamente de la Erección</br>del estado libre y Soberano de México".</h2>
-</font face></font color><center></font size>
-<font size="1"><font face="Arial"><center><font color="#000000">
-<h2>HORARIO DE GRUPO</br> SEMESTRE: FEBRERO-AGOSTO 2024</h2></font size></font face></center></font color>
+    <div class="container">
+        <div class="header">
+            <img src="encabezado1234.png" alt="Encabezado">
+        </div>
 
+        <div class="nav">
+            <a href="Prctica14Menu.html">
+                <img src="Imagen2.png" alt="Menú">
+            </a>
+        </div>
 
+        <center>
+            <h1>Jose Antonio Cruz Gutierrez, NL:4, Grupo:404</h1>
+            <h1>PARTICA 2 MARQUESINA</h1>
+        </center>
 
-<br>
-<center><table border="1" width="1000" height="80">
-<tr>
-<td > GRUPO:</td>
-<td><center>404</center></td>
-<td> SEMESTRE:</td>
-<td><center>CUARTO</center> </td>
-</tr>
-<tr>
-<td> TURNO:</td>
-<td> <center>MATUTINO</center></td>
-<td> ESPECIALIDAD:</td>
-<td><center>PROGRAMACIÓN</center> </td>
-</tr>
-<tr>
-<td> EDIFICIO:</td>
-<td> <center>E</center> </td>
-<td> AULA :</td>
-<td> <center>20</center> </td>
-</tr>
-</table></center>
-</br>
-<center><table border="1" width="1000" height="100"><c/enter>
-<tr>
+        <div class="datetime">
+            <p>Fecha: <span id="fecha"></span></p>
+            <p>Hora: <span id="hora"></span></p>
+        </div>
 
-<th width="100" height="80" style="background:#949494" ><center>HORA</center> </th>
-<th style="background:#949494"> <center>LUNES</center> </th>
-<td style="background:#949494"><center>AULA</center></td>
-<th style="background:#949494"><center> MARTES</center></th>
-<td style="background:#949494"> <center> AULA</center></td>
-<th style="background:#949494"><center> MIÉRCOLES</center></th>
-<td style="background:#949494"> <center> AULA</center></td>
-<th style="background:#949494"><center> JUEVES</center></th>
-<td style="background:#949494"><center>AULA</center></td>
-<th style="background:#949494"><center> VIERNES</center></th>
-<td style="background:#949494"><center> AULA</center></td>
-</tr>
-<tr>
+        <table>
+            <tr>
+                <th>N.L:04</th>
+                <th>Marquesina</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Animación de izquierda a derecha</td>
+                <td><marquee>Animación de izquierda a derecha</marquee></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Animación alternativa</td>
+                <td><marquee behavior="alternate">Animación alternativa</marquee></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>De abajo hacia arriba</td>
+                <td><marquee direction="up">De abajo hacia arriba</marquee></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>De arriba hacia abajo</td>
+                <td><marquee direction="down">De arriba hacia abajo</marquee></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>De arriba hacia abajo de manera alternativa</td>
+                <td><marquee direction="up" behavior="alternate" style="height:100px">De arriba hacia abajo de manera alternativa</marquee></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td><marquee behavior="alternate" direction="up" width="80%"><marquee direction="right">TEXT</marquee></marquee></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>El mismo ejemplo pero esta vez en un espacio cerrado</td>
+                <td><marquee behavior="alternate" direction="up" width="80%"><marquee direction="right" behavior="alternate">TEXT</marquee></marquee></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Usando un fondo</td>
+                <td><marquee direction="left" style="background:#FCF600">TEXT</marquee></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Aplicando un borde a la zona de movimiento</td>
+                <td><marquee style="border:green 5px solid">TEXT</marquee></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Un poco de texto aquí  </td>
+                <td><marquee>Un poco de texto aquí <img src="moto.jpg" width="88" height="31" alt="Moto"></marquee></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Animación dentro de una línea de texto o un párrafo</td>
+                <td>Un poco de texto antes <marquee width="20%"><img src="moto.jpg" width="88" height="31" alt="Moto"></marquee> Un poco de texto después.</td>
+            </tr>
+            <tr>
+                <td colspan="3">Jose Antonio Cruz</td>
+            </tr>
+        </table>
 
-<tr>
-<td><center> 07:01-07:50</center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Calculo Diferencial</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-</tr>
-
-<tr>
-<td><center> 07:51-08:40</center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Calculo Diferencial</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-
-</tr>
-<tr>
-<td> <center>08:41-09:30</center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Tutoria grupal </font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Fisica 1</font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ecología</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ingles lV</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Fisica 1</font></font></font></center></td>
-<td> <center>20 </center></td>
-
-</tr>
-<tr>
-<td> <center>09:31-10:20</center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Calculo Diferencial</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Física 1</font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ecologia</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Ingles IV</font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Fisica 1</font></font></font></center></td>
-<td> <center>20 </center></td>
-
-</tr>
-<tr>
-<td bgcolor ="#BDBBBB"> <center>10:21-10:50</center></td>
-<td colspan="10" bgcolor ="#BDBBBB"></td>
-</tr>
-
-<tr>
-<td> <center>10:51-11:40</center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Calculo Diferencial</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ingles lV</font></font></font></center></td>
-<td> <center>20 </center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Habilidades Blandas</font></font></font></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Sala de<br />
-computo 11 </font></font></font></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo<br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center> </td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Orientacion Educativa</font></font></font></center></td>
-<td> <center>20 </center></td>
-</tr>
-
-<tr>
-<td> <center>11:41-12:30</center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III-Submódulo 1<br />
-Construye paginas web </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo <br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo 1<br />
-Construye paginas web </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo <br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td><center>20 </center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ecologia</font></font></font></center></td>
-<td> <center>20 </center></td>
-
-
-</tr>
-
-<tr>
-<td> <center>12:31-13:20</center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo 1<br />
-Construye paginas web </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo <br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo 1<br />
-Construye paginas web </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Modulo III- Submódulo <br />
-II Desarrolla<br />aplicaciones que se<br />ejecuten al cliente </font></font></font></center></td>
-<td> <center>20 </center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">Ecología</font></font></font></center></td>
-<td> <center>20 </center></td>
-
-</tr>
-</center></table>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<center> </center>
-
-
-
-<center><table border="1"width="1000" height="100"><c/enter>
-<tr>
-<td bgcolor ="#BDBBBB"><b><center><font size="3"><font face= "Baskerville Old Face">CLAVE</font size="3"></font face= "Baskerville Old Face"></b></center></td>
-<td bgcolor ="#BDBBBB"> <center><b><font size="3"><font face= "Baskerville Old Face">ASIGNtURA DE LA FORMACION BASICA</font size="3"></font face= "Baskerville Old Face"></b> </center></td>
-<td bgcolor ="#BDBBBB"> <center><b><font size="3"><font face= "Baskerville Old Face">TEORICAS</font size="3"></font face= "Baskerville Old Face"></b></center></td>
-<td bgcolor ="#BDBBBB"> <center><b><font size="3"><font face= "Baskerville Old Face">PRACTICAS</font size="3"></font face= "Baskerville Old Face"></b></center></td>
-<td bgcolor ="#BDBBBB"> <center><b><font size="3"><font face= "Baskerville Old Face">TOTAL DE<br />HORAS</b></font size="3"></font face= "Baskerville Old Face"></center></td>
-<td bgcolor ="#BDBBBB"><center><b><font size="3"><font face= "Baskerville Old Face">NOMBRE DE LA DOCENTE</font size="3"></font face= "Baskerville Old Face"></b> </center> </td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">343104-13FB</font size="3"></font face= "Baskerville Old Face"></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Calculo Diferencial</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Margarita Suares Mirafuentes</font size="3"></font face= "Baskerville Old Face"></td>
-</tables>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">322204-13FB</font size="3"></font face= "Baskerville Old Face"></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Ingles IV</font size="3"></font face= "Baskerville Old Face"></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">3</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Fabiola Angeles Gonzales</font size="3"></font face= "Baskerville Old Face"></td>
-
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">3421101-13FB</font size="3"></font face= "Baskerville Old Face"></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Fisica 1</font size="3"></font face= "Baskerville Old Face"></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Sergio Moldragon Reyes</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">341201-13FB</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Ecologia</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Leticia Vieyra Ondilon</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">3061300001-
-17M3S1 </font size="3"></font face= "Baskerville Old Face"></td>
-<td><font size="3"><font face= "Baskerville Old Face">Módulo III - Submódulo I Construye páginas web</font size="3"></font face= "Baskerville Old Face"></td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Celia Romero Pichardo</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">3061300001-
-17M3S1</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Módulo III - Submódulo II Desarrolla aplicaciones que se ejecutan en el cliente</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">2</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">6</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Celia Romero Pichardo</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">3061300001-
-17M3S1</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Módulo III - Submódulo II Desarrolla aplicaciones que se ejecutan en el servidor</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">4</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">7</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td><font size="3"><font face= "Baskerville Old Face">Celia Romero Pichardo</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">OE-04 </font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Orientación Educativa IV </font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">0</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></td>
-<td><font size="3"><font face= "Baskerville Old Face">Noemí Aguilar De La Cruz</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">HB-04</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Habilidades Blandas</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">0</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Noemí Aguilar De La Cruz</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-<tr>
-<td><font size="3"><font face= "Baskerville Old Face">TG-04</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><font size="3"><font face= "Baskerville Old Face">Tutoría Grupal</font size="3"></font face= "Baskerville Old Face"> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">0</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td><center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center> </td>
-<td> <center><font size="3"><font face= "Baskerville Old Face">1</font size="3"></font face= "Baskerville Old Face"></center></td>
-<td> <font size="3"><font face= "Baskerville Old Face">Celia Romero Pichardo</font size="3"></font face= "Baskerville Old Face"></td>
-</tr>
-</center></table><center><img src="Captura.png"" alt="P2_tablas.html"></center>
-
-<center><img src="encabezados.jpg"" alt="P2_tablas.html"></center>
-
-
-
-
+        <div class="footer">
+            <img src="piedepag.png" alt="Pie de Página">
+            <p>Todos los derechos reservados. Elaborado por: José Antonio Cruz Gutiérrez. Tel: 7121875851. E-Mail: joseantoniocruzgutierrez@gmail.com</p>
+            <p>Página web: <a href="http://www.caratula.gob.mx">www.caratula.gob.mx</a>, Domicilio: desconocido</p>
+        </div>
+    </div>
 
 </body>
 </html>
-
